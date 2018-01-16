@@ -10,18 +10,22 @@
 		7B3A41D52003D7E900A453DC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A41D42003D7E900A453DC /* Game.swift */; };
 		7B3A41D72003D7F300A453DC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A41D62003D7F300A453DC /* Card.swift */; };
 		7B3A41DA2003DC6400A453DC /* ArrayShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A41D92003DC6400A453DC /* ArrayShuffle.swift */; };
+		7BED36F1200933F700A9E3E0 /* CardsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BED36F0200933F700A9E3E0 /* CardsContainer.swift */; };
 		7BF67A941FF40FDF0098F9CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF67A931FF40FDF0098F9CF /* AppDelegate.swift */; };
 		7BF67A961FF40FDF0098F9CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF67A951FF40FDF0098F9CF /* GameViewController.swift */; };
 		7BF67A991FF40FDF0098F9CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF67A971FF40FDF0098F9CF /* Main.storyboard */; };
 		7BF67A9B1FF40FDF0098F9CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF67A9A1FF40FDF0098F9CF /* Assets.xcassets */; };
 		7BF67A9E1FF40FDF0098F9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF67A9C1FF40FDF0098F9CF /* LaunchScreen.storyboard */; };
 		7BF67AA61FF413B70098F9CF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF67AA51FF413B70098F9CF /* ResultViewController.swift */; };
+		B2FD8A1D200D02D800A8542A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD8A1C200D02D800A8542A /* UIView.swift */; };
+		B2FD8A1F200D130A00A8542A /* AddSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FD8A1E200D130A00A8542A /* AddSubview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B3A41D42003D7E900A453DC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7B3A41D62003D7F300A453DC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		7B3A41D92003DC6400A453DC /* ArrayShuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayShuffle.swift; sourceTree = "<group>"; };
+		7BED36F0200933F700A9E3E0 /* CardsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsContainer.swift; sourceTree = "<group>"; };
 		7BF67A901FF40FDF0098F9CF /* memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF67A931FF40FDF0098F9CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BF67A951FF40FDF0098F9CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		7BF67A9D1FF40FDF0098F9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF67A9F1FF40FDF0098F9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BF67AA51FF413B70098F9CF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B2FD8A1C200D02D800A8542A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B2FD8A1E200D130A00A8542A /* AddSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,10 +53,18 @@
 			isa = PBXGroup;
 			children = (
 				7B3A41D42003D7E900A453DC /* Game.swift */,
-				7B3A41D92003DC6400A453DC /* ArrayShuffle.swift */,
 				7B3A41D62003D7F300A453DC /* Card.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7B3A41D82003DC1D00A453DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7B3A41D92003DC6400A453DC /* ArrayShuffle.swift */,
+				B2FD8A1E200D130A00A8542A /* AddSubview.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		7BF67A871FF40FDF0098F9CF = {
@@ -72,8 +86,10 @@
 		7BF67A921FF40FDF0098F9CF /* memo */ = {
 			isa = PBXGroup;
 			children = (
-				7BF67A931FF40FDF0098F9CF /* AppDelegate.swift */,
+				B2AE80DA200E831100F5AF1F /* View */,
+				7B3A41D82003DC1D00A453DC /* Utilities */,
 				7B3A41D32003D7C300A453DC /* Model */,
+				7BF67A931FF40FDF0098F9CF /* AppDelegate.swift */,
 				7BF67AA71FF414C90098F9CF /* GameCotrollers */,
 				7BF67A971FF40FDF0098F9CF /* Main.storyboard */,
 				7BF67A9A1FF40FDF0098F9CF /* Assets.xcassets */,
@@ -88,8 +104,17 @@
 			children = (
 				7BF67A951FF40FDF0098F9CF /* GameViewController.swift */,
 				7BF67AA51FF413B70098F9CF /* ResultViewController.swift */,
+				7BED36F0200933F700A9E3E0 /* CardsContainer.swift */,
 			);
 			path = GameCotrollers;
+			sourceTree = "<group>";
+		};
+		B2AE80DA200E831100F5AF1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2FD8A1C200D02D800A8542A /* UIView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,12 +189,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FD8A1D200D02D800A8542A /* UIView.swift in Sources */,
 				7BF67A961FF40FDF0098F9CF /* GameViewController.swift in Sources */,
 				7BF67A941FF40FDF0098F9CF /* AppDelegate.swift in Sources */,
+				7BED36F1200933F700A9E3E0 /* CardsContainer.swift in Sources */,
 				7B3A41D72003D7F300A453DC /* Card.swift in Sources */,
 				7B3A41DA2003DC6400A453DC /* ArrayShuffle.swift in Sources */,
 				7BF67AA61FF413B70098F9CF /* ResultViewController.swift in Sources */,
 				7B3A41D52003D7E900A453DC /* Game.swift in Sources */,
+				B2FD8A1F200D130A00A8542A /* AddSubview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

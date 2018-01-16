@@ -1,3 +1,10 @@
+//
+//  ArrayShuffle.swift
+//  memo
+//
+//  Created by Artsiom Sadyryn on 1/8/18.
+//  Copyright © 2018 Artsiom Sadyryn. All rights reserved.
+//
 
 import Foundation
 
@@ -8,6 +15,6 @@ extension Array {
             let randomIndex = arc4random_uniform(UInt32(self.count - 1))
             newArr.swapAt(i, Array.Index(randomIndex))
         }
-        return self
+        return newArr
     }
 }
