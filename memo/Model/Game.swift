@@ -38,8 +38,8 @@ class Game {
         }
 
         for name in names {
-            let card = Card(isFlipped: false, imageName: name)
-            let card2 = Card(isFlipped: false, imageName: name)
+            let card = Card(isFlipped: false, isMatched: false, imageName: name)
+            let card2 = Card(isFlipped: false, isMatched: false, imageName: name)
             cards.append(card)
             cards.append(card2)
         }
@@ -48,6 +48,7 @@ class Game {
     }
     
     func cardFlipped(at index: Int) {
+        cards[index].isFlipped = true
         if let flipped = flippedCard {
             twoCardsFlipped(cardOne: flipped, cardTwo: index)
             flippedCard = nil
@@ -55,12 +56,15 @@ class Game {
         else {
             flippedCard = index
         }
+        
+        let center = NotificationCenter.default
+        center.post(name: NSNotification.Name(rawValue: "gameChanged"), object: nil)
     }
     
     func twoCardsFlipped(cardOne: Int, cardTwo: Int) -> Bool {
         if cards[cardOne] == cards[cardTwo] {
-            cards[cardOne].isFlipped = true
-            cards[cardTwo].isFlipped = true
+            cards[cardOne].isMatched = true
+            cards[cardTwo].isMatched = true
             let cardsRemained = cards.filter { !($0.isFlipped) }.count
             if cardsRemained == 0 {
                 isFinished = true
@@ -69,6 +73,8 @@ class Game {
             return true
         }
         else {
+            cards[cardOne].isFlipped = false
+            cards[cardTwo].isFlipped = false
             return false
         }
     }

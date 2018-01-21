@@ -11,7 +11,9 @@ import Foundation
 import UIKit
 
 class CardsContainer: UIView {
-    func layout(views: [UIView]) {
+    func layout() {
+        let views = self.subviews
+        
         var inRow = 6
         let count = views.count
         if count <= 4 {
